@@ -24,3 +24,6 @@ add_executable(vui_client_example example/client/vui_client_example.cpp)
 add_executable(h1_arm_sdk_dds_example example/humanoid/high_level/h1_arm_sdk_dds_example.cpp)
 add_executable(h1_loco_example_client example/humanoid/high_level/h1_loco_example_client.cpp)
 add_executable(h1_low_level_example example/humanoid/low_level/humanoid.cpp)
+
+find_package(pybind11 REQUIRED)
+pybind11_add_module(example example/state_machine/py.cpp)
